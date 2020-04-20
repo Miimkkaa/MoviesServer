@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const TvShows = sequelize.define("tvshows", {
+    const TvShow = sequelize.define("tvshows", {
     TvShowId: {
         type: Sequelize.INTEGER
       },
@@ -20,5 +20,5 @@ module.exports = (sequelize, Sequelize) => {
       }
     });
   
-    return TvShows;
+    return TvShow;
   };
