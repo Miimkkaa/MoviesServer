@@ -12,6 +12,6 @@ db.sequelize = sequelize;
 
 // db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 
-db.MovieDB = require("./tvshows.model")(sequelize, Sequelize)
+db.MovieDB = require("./tvshows.model.js")(sequelize, Sequelize)
 
 module.exports = db;
