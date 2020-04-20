@@ -14,12 +14,11 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const tvshow = {
-    TvShowId: req.body.TvShowId,
-    Title: req.body.Title,
-    Description: req.body.Description,
-    URL: req.body.URL,
-    Genre: req.body.Genre,
-    Picture: req.body.Picture,
+    title: req.body.title,
+    description: req.body.description,
+    url: req.body.url,
+    genre: req.body.genre,
+    picture: req.body.picture,
 
   };
 

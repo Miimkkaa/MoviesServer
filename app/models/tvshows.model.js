@@ -1,21 +1,18 @@
 module.exports = (sequelize, Sequelize) => {
     const TvShow = sequelize.define("tvshows", {
-    TvShowId: {
-        type: Sequelize.INTEGER
-      },
-      Title: {
+      title: {
         type: Sequelize.STRING
       },
-      Description: {
+      description: {
         type: Sequelize.STRING
       },
-      URL: {
+      url: {
         type: Sequelize.STRING
       },
-      Genre: {
+      genre: {
         type: Sequelize.STRING
       },
-      Picture: {
+      picture: {
         type: Sequelize.STRING
       }
     });

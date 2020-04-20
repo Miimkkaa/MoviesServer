@@ -7,8 +7,7 @@ module.exports = app => {
     router.post("/", tvshows.create);
   
     // Retrieve all Tutorials
-    app.route('/tvshows')
-    .get(tvshows.findAll);
+    router.get("/", tvshows.findAll);
   
     // Retrieve all published Tutorials
     router.get("/published", tvshows.findAllPublished);
