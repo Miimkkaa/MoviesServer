@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.title) {
+    if (!req.body.Title) {
         res.status(400).send({
             message: "Content can not be empty!"
         });
@@ -54,7 +54,7 @@ exports.findAll = (req, res) => {
 
 // Find a single Tutorial with an id
 exports.findOne = (req, res) => {
-    const id = req.params.TvShowId;
+    var id = req.params.id;
 
     TvShow.findByPk(id)
         .then(data => {
@@ -70,7 +70,7 @@ exports.findOne = (req, res) => {
 
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
-    const id = req.params.TvShowId;
+    const id = req.params.id;
 
     TvShow.update(req.body, {
         where: {id: id}
@@ -96,7 +96,7 @@ exports.update = (req, res) => {
 
 // Delete a Tutorial with the specified id in the request
 exports.delete = (req, res) => {
-    const id = req.params.TvShowId;
+    const id = req.params.id;
 
     TvShow.destroy({
         where: {id: id}

@@ -10,10 +10,7 @@ module.exports = app => {
     // app.route('/tvshows')
     // .get(tvshows.findAll);
 
-    router.get("/all", tvshows.findAll);
-
-    // Retrieve all published Tutorials
-    router.get("/published", tvshows.findAllPublished);
+    router.get("/", tvshows.findAll);
 
     // Retrieve a single Tutorial with id
     router.get("/:id", tvshows.findOne);
@@ -25,7 +22,7 @@ module.exports = app => {
     router.delete("/:id", tvshows.delete);
 
     // Create a new Tutorial
-    router.delete("/", tvshows.deleteAll);
+    //router.delete("/", tvshows.deleteAll);
 
     //base url
     app.use('/api/tvshows', router);
