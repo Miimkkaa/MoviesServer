@@ -133,13 +133,21 @@ exports.delete = (req, res) => {
 };
 
 // Login validation
-/*exports.findAll = (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  var collection = Person.findAll();
-  var condition = username ? { username: { [Op.like]: `%${username}%` } } : null && password ? { password: { [Op.like]: `%${password}%` } } : null;
+exports.login = (req, res) => {
+  const username = req.params.username;
+  const password = req.params.password;
+//  var condition =  { username: { [Op.like]: `%${username}%` } }
+//  console.log(username);
 
-  Person.findAll({ where: condition })
+  if (!(username && password)) {
+    res.status(400).send({
+      message: "Sorry, something went wrong."
+    });
+  } else {
+  /*  res.status(200).send({
+      message: "okii."
+    }); */
+    Person.findOne({where: { username: username, password: password }})
     .then(data => {
       res.send(data);
     })
@@ -149,4 +157,5 @@ exports.delete = (req, res) => {
           err.message || "Some error occurred while retrieving."
       });
     });
-}; */
+  }
+}; 
