@@ -10,8 +10,8 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-// db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 
 db.tvshows = require("./tvshows.model.js")(sequelize, Sequelize)
+db.person = require("./person.model.js")(sequelize, Sequelize);
 
 module.exports = db;
