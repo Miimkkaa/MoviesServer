@@ -17,7 +17,7 @@ exports.create = (req, res) => {
         // TvShowId: req.body.TvShowId,
         Title: req.body.Title,
         Description: req.body.Description,
-        URL: req.body.URL,
+        URL: req.body.Url,
         Genre: req.body.Genre,
         Picture: req.body.Picture,
 
