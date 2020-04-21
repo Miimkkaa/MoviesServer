@@ -3,11 +3,11 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new user
-    router.post("/", person.create);
-  
     // Get all users
     router.get("/", person.findAll);
+
+    // Create a new user
+    router.post("/", person.create);
   
     // Get user by id
     router.get("/:id", person.findOne);
@@ -18,7 +18,7 @@ module.exports = app => {
     // Delete all users
     router.delete("/", person.deleteAll);
 
-    // Delete a Tutorial with id
+    // Delete a user by id
     router.delete("/:id", person.delete);
 
     // Login check
