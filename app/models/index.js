@@ -1,6 +1,7 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize('MovieDB', 'root', 'jakub123', {
+const sequelize = new Sequelize('moviedb', 'root', '', {
+
   host: "localhost",
   dialect: "mysql",
   port: 3306
@@ -12,8 +13,15 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
+
 db.movies = require("./movie.model.js")(sequelize, Sequelize);
 db.tvshows = require("./tvshows.model.js")(sequelize, Sequelize)
 db.person = require("./person.model.js")(sequelize, Sequelize);
+
+//db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
+
+db.favorites = require("./favorites.model.js")(sequelize, Sequelize);
+
+
 
 module.exports = db;
