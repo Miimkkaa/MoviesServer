@@ -14,4 +14,5 @@ db.sequelize = sequelize;
 
 db.favorites = require("./favorites.model.js")(sequelize, Sequelize);
 
+
 module.exports = db;
