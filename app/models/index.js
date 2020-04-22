@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize");
+
 const sequelize = new Sequelize('MovieDB', 'root', 'jakub123', {
   host: "localhost",
   dialect: "mysql",
@@ -11,6 +12,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
+db.movies = require("./movie.model.js")(sequelize, Sequelize);
 db.tvshows = require("./tvshows.model.js")(sequelize, Sequelize)
 db.person = require("./person.model.js")(sequelize, Sequelize);
 
