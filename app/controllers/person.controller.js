@@ -136,6 +136,7 @@ exports.delete = (req, res) => {
 exports.login = (req, res) => {
   const username = req.params.username;
   const password = req.params.password;
+  
 //  var condition =  { username: { [Op.like]: `%${username}%` } }
 //  console.log(username);
 
